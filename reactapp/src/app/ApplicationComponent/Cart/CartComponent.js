@@ -33,6 +33,9 @@ const CartComponent = () => {
   const BtnContinueShoppingHandler = () => {
     navigate("/displayproduct");
   };
+  const BtnCheckoutHandler = () => {
+    navigate("/checkout");
+  };
 
   //Save Cart Button
 
@@ -110,7 +113,11 @@ const CartComponent = () => {
                       >
                         Save Cart
                       </MDBBtn>
-                      <MDBBtn color="primary" size="lg">
+                      <MDBBtn
+                        color="primary"
+                        size="lg"
+                        onClick={BtnCheckoutHandler}
+                      >
                         Check Out
                       </MDBBtn>
                     </div>

@@ -19,6 +19,7 @@ import HobbiesComponent from "./ApplicationComponent/Hobbies/HobbiesComponent";
 import ProductComponent from "./ApplicationComponent/Products/ProductComponent";
 import DisplayProductsComponent from "./ApplicationComponent/Products/DisplayProductsComponent";
 import CartComponent from "./ApplicationComponent/Cart/CartComponent";
+import CheckOutComponent from "./ApplicationComponent/Checkout/CheckOutComponent";
 export default class ApplicationComponent extends Component {
   //virtual dom of component // 1 - state  ==>  2 - state
   render() {
@@ -39,7 +40,9 @@ export default class ApplicationComponent extends Component {
             path="/displayProduct"
             element={<DisplayProductsComponent />}
           />
-          <Route path="/student" element={<Student />} />
+          {/* <Route path="/student" element={<Student />} /> */}
+          <Route path="/checkout" element={<CheckOutComponent />} />
+
           <Route path="/hobbies" element={<HobbiesComponent />} />
           <Route path="/cart" element={<CartComponent />} />
 
