@@ -9,11 +9,11 @@ To Clone in your own machine -
 
 go to any directory where you want to clone and run below
 
-git clone https://github.com/MishraAshish/MERNStack14.git
+git clone https://github.com/vule1993/MERNAPP
 
 To run the node api MERNAPP cd - node-server - run - npm i then - npm start
 
-MERNStack14 cd - reactapp run - npm i then - npm start
+MERNAPP cd - reactapp run - npm i then - npm start
 
 important : npm i -command is used to install all dependencies mentioned in package.json important : npm i -command is used to install module in the project
 
@@ -31,4 +31,4 @@ git reset --hard and then take git pull
 
 git clean -fd git pull
 
-when we do clone in our own repo git init git add README.md git add . git commit -m "first commit" git remote add origin https://github.com/MishraAshish/MERNStack14.git git push origin master
+when we do clone in our own repo git init git add README.md git add . git commit -m "first commit" git remote add origin https://github.com/vule1993/MERNAPP git push origin master
