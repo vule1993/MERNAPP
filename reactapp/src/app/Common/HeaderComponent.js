@@ -30,6 +30,9 @@ let Header = (props) => {
         >
           Products{" "}
         </NavLink>
+        <NavLink to="/coupon" className="button" activeclassname="success">
+          Coupon Generator{" "}
+        </NavLink>
         <NavLink to="/about" className="button" activeclassname="success">
           About{" "}
         </NavLink>

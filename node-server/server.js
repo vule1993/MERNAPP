@@ -21,6 +21,9 @@ let productsRouter = require("./Routes/productsRouter");
 let cartApp = express();
 let cartRouter = require("./Routes/cartRouter");
 
+let couponApp = express();
+let couponRouter = require("./Routes/couponRouter");
+
 app.use(cors()); //setting cross origin to top level express api
 // serve static files like images css using static middleware
 app.use("/static", express.static("public"));
@@ -43,6 +46,9 @@ productsApp.use("/", productsRouter);
 
 app.use("/cart", cartApp);
 cartApp.use("/", cartRouter);
+
+app.use("/coupon", couponApp);
+couponApp.use("/", couponRouter);
 
 //main application hosted to listen on 9000 port
 app.listen(port, () => console.log(`server is listing as port ${port}`));

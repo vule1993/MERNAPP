@@ -24,3 +24,6 @@ export const REMOVE_FROM_CART = "REMOVE_FROM_CART";
 export const SAVE_CART = "SAVE_CART";
 export const EMPTY_CART = "EMPTY_CART";
 export const UPDATE_ITEM_QUANTITY = "UPDATE_ITEM_QUANTITY";
+
+export const SAVE_COUPON = "SAVE_COUPON";
+export const REDEEM_COUPON = "REDEEM_COUPON";

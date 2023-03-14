@@ -15,6 +15,7 @@ import {
   displayProductsReducer,
 } from "./products/productsReducer";
 import { cartReducer } from "./cart/cartReducer";
+import couponReducer from "./coupon/couponReducer";
 
 const logger = () => (next) => (action) => {
   //currying in javasript where we pass function as input and recieve function as output
@@ -30,6 +31,7 @@ const rootReducer = combineReducers({
   productsReducer,
   displayProductsReducer,
   cartReducer,
+  couponReducer,
 });
 
 //create configure and export the store from this code

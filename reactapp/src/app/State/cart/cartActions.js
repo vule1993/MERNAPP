@@ -77,7 +77,9 @@ export const getUserCart = (userid) => {
         if (userCart && userCart.itemList) {
           userCart.itemList.map((item) => {
             console.log("item in for of", item);
-            dispatch(addToCart(item));
+            for (let i = 0; i < item.quantity; i++) {
+              dispatch(addToCart(item));
+            }
           });
         } else {
           console.log("Error: itemList is undefined or null");
