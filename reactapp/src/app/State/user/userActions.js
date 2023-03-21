@@ -3,6 +3,7 @@
 import { USER_ADD } from "../actionTypes";
 import axios from "axios";
 import { getUserCart } from "../cart/cartActions";
+import { getRecentOrdersFromDB } from "../recentOrders/recentOrdersActions";
 
 //action is the object that we'll dispatch from user component to store/reducer
 export const addUserToStore = (user) => {
@@ -34,9 +35,10 @@ export const signInSignUpUser = (user) => {
         //dispatching to store so that user state gets updated with new user
         dispatch(addUserToStore(signUser));
         dispatch(getUserCart(signUser._id));
+        dispatch(getRecentOrdersFromDB(signUser._id));
       })
-      .catch((err) => {
-        console.log("err in login ", err);
+      .catch((error) => {
+        console.log("err in login ", error);
       });
   };
 };

@@ -21,13 +21,6 @@ export const removeFromCart = (item_id) => {
   };
 };
 
-// export const saveCart = (cart) => {
-//   return {
-//     type: SAVE_CART,
-//     payload: cart,
-//   };
-// };
-
 export const emptyCart = () => {
   return {
     type: EMPTY_CART,

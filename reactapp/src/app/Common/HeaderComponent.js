@@ -1,13 +1,18 @@
 import React from "react";
+import { useSelector } from "react-redux";
 import { NavLink, useNavigate, Link } from "react-router-dom";
 import { connect } from "react-redux";
+import NotificationList from "../ApplicationComponent/Notification/NotificationList";
 
 let Header = (props) => {
-  console.log(props.user); // reading store data send from mapStateToProps as props here
-
-  let userName = props.user.userName;
-
+  const navStyle = {
+    display: "inline-block",
+    marginRight: "10px",
+    float: "right",
+  };
   let navigate = useNavigate();
+
+  const userName = useSelector((state) => state.userReducer.userName);
 
   return (
     <>
@@ -33,27 +38,30 @@ let Header = (props) => {
         <NavLink to="/coupon" className="button" activeclassname="success">
           Coupon Generator{" "}
         </NavLink>
+        <NavLink
+          to="/recentOrders"
+          className="button"
+          activeclassname="success"
+        >
+          Recent Orders{" "}
+        </NavLink>
         <NavLink to="/about" className="button" activeclassname="success">
           About{" "}
         </NavLink>
         <NavLink to="/cart" className="button" activeclassname="success">
           Cart{" "}
         </NavLink>
+        {userName !== "Default UserName" ? (
+          <div style={navStyle}>
+            <NotificationList />
+          </div>
+        ) : (
+          <div></div>
+        )}
       </div>
     </>
   );
 };
-
-// Header.defaultProps = {
-//     headerTitle : "Header Default Component"
-// }
-
-// Header.propTypes = {
-//     headerTitle : PropTypes.string.isRequired
-// }
-
-//subscribe - mapStateToProps -- mapStoreToProps
-//publish - mapDispatchToProps -- send new to store
 
 let mapStateToProps = (state) => {
   //store

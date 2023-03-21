@@ -41,9 +41,9 @@ export default function CheckOutHook() {
     setCartQuantity(cartQuantity);
   }, [itemList]);
 
-  const paymentHandler = () => {
-    setShowPaymentMessage(true);
-  };
+  // const paymentHandler = () => {
+  //   setShowPaymentMessage(true);
+  // };
 
   const couponHandler = (evt) => {
     const couponCode = couponCodeRef.current.value;

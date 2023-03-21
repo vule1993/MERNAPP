@@ -1,6 +1,6 @@
 import axios from "axios";
-import { PRODUCTS_SAVE } from "../actionTypes";
 import {
+  PRODUCTS_SAVE,
   FETCH_PRODUCT_FAILURE,
   FETCH_PRODUCT_REQUEST,
   FETCH_PRODUCT_SUCCESS,

@@ -30,7 +30,7 @@ cartRouter.post("/api/savecart", async (req, res) => {
 
 cartRouter.post("/api/getUserCart", (req, res) => {
   cartDataModel
-    .findOne({ "user._id": req.body["user._id"] })
+    .findOne({ "user._id": req.body })
     .then((cartDbObj) => {
       if (cartDbObj) {
         res.json(cartDbObj);

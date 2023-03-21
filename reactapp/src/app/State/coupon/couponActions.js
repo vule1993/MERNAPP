@@ -38,7 +38,7 @@ export const redeemCouponToDB = (couponObj) => {
       .post("http://localhost:9000/coupon/api/redeemcoupon", couponObj)
       .then((res) => {
         const redeemedCoupon = res.data;
-        console.log("Successfully redeemed the coupon", redeemedCoupon);
+        alert("Successfully redeemed the coupon");
         console.log(couponObj.totalAmount);
         dispatch(redeemCouponToStore(redeemedCoupon));
         const discountAmount = calculateDiscountAmount(
